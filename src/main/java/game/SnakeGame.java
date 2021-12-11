@@ -28,13 +28,13 @@ public class SnakeGame {
 
 	private void play() {
 
-		playfield = new Playfield(120,60);
+		playfield = new Playfield(80,60);
 
 		{
 			Player playerA;
 			playerA = new Player();
 			playerA.setName("Player One");
-			playerA.getSnake().setStartfield(new Field(20,30));
+			playerA.getSnake().setStartfield(new Field(20,playfield.getMaxY()/2));
 			playerA.getSnake().reset();
 			playerA.getSnake().setFarbe(Color.BLUE);
 			
@@ -53,7 +53,7 @@ public class SnakeGame {
 			Player playerB;
 			playerB = new Player();
 			playerB.setName("Player Two");
-			playerB.getSnake().setStartfield(new Field(100,30));
+			playerB.getSnake().setStartfield(new Field(playfield.getMaxX() - 20 ,playfield.getMaxY()/2));
 			playerB.getSnake().reset();
 			playerB.getSnake().setFarbe(Color.RED);
 			

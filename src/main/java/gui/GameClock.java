@@ -24,7 +24,7 @@ public class GameClock extends Thread{
 	
 			try {
 				
-				sleep(200);
+				sleep(150);
 	
 				for (Player player : gui.snakeGame.getPlayerList()) {
 					
@@ -54,7 +54,6 @@ public class GameClock extends Thread{
 						 p.setScore( p.getScore() + 1);
 					 });
 					 
-					 // Just show the first hit
 					 if (hitList.size() > 0) {
 							gui.snakeGame.reset();
 							break;
