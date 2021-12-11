@@ -25,7 +25,7 @@ jobs:
       - name: Upload Release      
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "target/dependencies.jar*"
+          artifacts: "target/*dependencies.jar*"
           token: ${{ secrets.GITHUB_TOKEN }}
 
     
